@@ -134,9 +134,9 @@
         64,
         32
       ],
-      "alpha": 1e-05,
-      "learning_rate_init": 0.001,
-      "batch_size": 128
+      "alpha": "relu",
+      "learning_rate_init": 1e-05,
+      "batch_size": 0.001
     },
     "validation_f1": 0.5716733994368955,
     "threshold": 0.18000000000000002,
