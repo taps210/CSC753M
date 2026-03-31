@@ -1,0 +1,265 @@
+{
+  "csv_path": "C:\\Users\\Allysa\\Downloads\\CSC753M\\archive\\youtube_shorts_tiktok_trends_2025.csv",
+  "rows": 48079,
+  "columns": [
+    "platform",
+    "country",
+    "region",
+    "language",
+    "category",
+    "hashtag",
+    "title_keywords",
+    "author_handle",
+    "sound_type",
+    "music_track",
+    "week_of_year",
+    "duration_sec",
+    "views",
+    "likes",
+    "comments",
+    "shares",
+    "saves",
+    "engagement_rate",
+    "trend_label",
+    "source_hint",
+    "notes",
+    "device_type",
+    "upload_hour",
+    "genre",
+    "trend_duration_days",
+    "trend_type",
+    "engagement_velocity",
+    "dislikes",
+    "comment_ratio",
+    "share_rate",
+    "save_rate",
+    "like_dislike_ratio",
+    "publish_dayofweek",
+    "publish_period",
+    "event_season",
+    "tags",
+    "sample_comments",
+    "creator_avg_views",
+    "creator_tier",
+    "season",
+    "publish_date_approx",
+    "year_month",
+    "title",
+    "title_length",
+    "has_emoji",
+    "avg_watch_time_sec",
+    "completion_rate",
+    "device_brand",
+    "traffic_source",
+    "is_weekend",
+    "row_id",
+    "engagement_total",
+    "like_rate",
+    "dislike_rate",
+    "engagement_per_1k",
+    "engagement_like_rate",
+    "engagement_comment_rate",
+    "engagement_share_rate",
+    "title_word_count",
+    "title_special_char_count",
+    "title_keywords_length",
+    "title_keywords_word_count",
+    "tag_count",
+    "sample_comments_length"
+  ],
+  "target_percentile": 0.75,
+  "engagement_threshold_from_train": 0.08709901926129152,
+  "feature_mode": "strict",
+  "numeric_features": [
+    "week_of_year",
+    "duration_sec",
+    "upload_hour",
+    "trend_duration_days",
+    "engagement_velocity",
+    "creator_avg_views",
+    "title_length",
+    "title_word_count",
+    "title_special_char_count",
+    "has_emoji",
+    "avg_watch_time_sec",
+    "completion_rate",
+    "is_weekend",
+    "title_keywords_length",
+    "title_keywords_word_count",
+    "tag_count",
+    "sample_comments_length"
+  ],
+  "categorical_features": [
+    "platform",
+    "country",
+    "region",
+    "language",
+    "category",
+    "hashtag",
+    "author_handle",
+    "sound_type",
+    "music_track",
+    "trend_label",
+    "source_hint",
+    "notes",
+    "device_type",
+    "genre",
+    "trend_type",
+    "publish_dayofweek",
+    "publish_period",
+    "event_season",
+    "creator_tier",
+    "season",
+    "device_brand",
+    "traffic_source",
+    "year_month"
+  ],
+  "best_model_by_validation_roc_auc": "mlp_existing_impl",
+  "validation_results": [
+    {
+      "model": "logistic_regression",
+      "accuracy": 0.6389351081530782,
+      "f1": 0.5573686894441612,
+      "precision": 0.4,
+      "recall": 0.9188734762505254,
+      "roc_auc": 0.7479676128400692,
+      "classification_report": {
+        "0": {
+          "precision": 0.9535051794748254,
+          "recall": 0.5469117037446456,
+          "f1-score": 0.6951176677204074,
+          "support": 7237.0
+        },
+        "1": {
+          "precision": 0.4,
+          "recall": 0.9188734762505254,
+          "f1-score": 0.5573686894441612,
+          "support": 2379.0
+        },
+        "accuracy": 0.6389351081530782,
+        "macro avg": {
+          "precision": 0.6767525897374127,
+          "recall": 0.7328925899975856,
+          "f1-score": 0.6262431785822843,
+          "support": 9616.0
+        },
+        "weighted avg": {
+          "precision": 0.816567905975386,
+          "recall": 0.6389351081530782,
+          "f1-score": 0.6610385475749011,
+          "support": 9616.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          3958,
+          3279
+        ],
+        [
+          193,
+          2186
+        ]
+      ]
+    },
+    {
+      "model": "mlp_existing_impl",
+      "accuracy": 0.7444883527454242,
+      "f1": 0.09768637532133675,
+      "precision": 0.3866279069767442,
+      "recall": 0.05590584279108869,
+      "roc_auc": 0.7555100612929574,
+      "classification_report": {
+        "0": {
+          "precision": 0.7577653149266609,
+          "recall": 0.9708442724886003,
+          "f1-score": 0.8511720879520261,
+          "support": 7237.0
+        },
+        "1": {
+          "precision": 0.3866279069767442,
+          "recall": 0.05590584279108869,
+          "f1-score": 0.09768637532133675,
+          "support": 2379.0
+        },
+        "accuracy": 0.7444883527454242,
+        "macro avg": {
+          "precision": 0.5721966109517025,
+          "recall": 0.5133750576398445,
+          "f1-score": 0.47442923163668144,
+          "support": 9616.0
+        },
+        "weighted avg": {
+          "precision": 0.6659458584465391,
+          "recall": 0.7444883527454242,
+          "f1-score": 0.6647595972751948,
+          "support": 9616.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          7026,
+          211
+        ],
+        [
+          2246,
+          133
+        ]
+      ]
+    }
+  ],
+  "test_result_of_best_model": {
+    "model": "mlp_existing_impl_test",
+    "accuracy": 0.7414725457570716,
+    "f1": 0.05042016806722689,
+    "precision": 0.42857142857142855,
+    "recall": 0.026785714285714284,
+    "roc_auc": 0.7540117967183823,
+    "classification_report": {
+      "0": {
+        "precision": 0.746565208201226,
+        "recall": 0.9876957494407159,
+        "f1-score": 0.8503671602263152,
+        "support": 7152.0
+      },
+      "1": {
+        "precision": 0.42857142857142855,
+        "recall": 0.026785714285714284,
+        "f1-score": 0.05042016806722689,
+        "support": 2464.0
+      },
+      "accuracy": 0.7414725457570716,
+      "macro avg": {
+        "precision": 0.5875683183863273,
+        "recall": 0.507240731863215,
+        "f1-score": 0.45039366414677107,
+        "support": 9616.0
+      },
+      "weighted avg": {
+        "precision": 0.6650826090947554,
+        "recall": 0.7414725457570716,
+        "f1-score": 0.6453890624018566,
+        "support": 9616.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        7064,
+        88
+      ],
+      [
+        2398,
+        66
+      ]
+    ]
+  },
+  "split_sizes": {
+    "train": 28847,
+    "validation": 9616,
+    "test": 9616
+  },
+  "class_balance": {
+    "train_positive_rate": 0.2500086664124519,
+    "validation_positive_rate": 0.24740016638935108,
+    "test_positive_rate": 0.2562396006655574
+  }
+}
